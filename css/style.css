@@ -1,0 +1,468 @@
+/* Fonts */
+
+@font-face {
+    font-family: freestyle;
+    src: url(../fonts/TheLabothings.ttf);
+  }
+
+@font-face {
+    font-family: Adventure;
+    src: url(../fonts/Adventure.otf);
+  }
+
+@font-face {
+    font-family: Primary;
+    src: url(../fonts/ABeeZee-Regular.ttf);
+}
+/* colors */
+:root{
+    --p-color:rgba(255,255,255,1);
+    --s-color:rgba(2, 195, 154,1);
+    --m-color: rgba(0,0,0,1);
+    --opac-from:0.5;
+    --opac-to  :0.5;
+}
+/* Resets */
+*,
+::before,
+::after{
+    margin:0;
+    padding:0;
+    box-sizing:inherit;
+}
+
+html{
+     font-size:66%;
+/*    font-size:10px;*/
+}
+
+/* Pre Sets */
+
+.p1{padding:1.5rem;}
+.p2{padding:2rem}
+.p3{padding:3rem}
+.p4{padding:4rem}
+.p5{padding:5rem}
+.p6{padding:6rem}
+
+.col1{width:8.33%}
+.col2{width:16.66%}
+.col3{width:25%}
+.col4{width:33.33%}
+.col5{width:41.66%}
+.col6{width:50%}
+.col7{width:58.33%}
+.col8{width:66.66%}
+.col9{width:75%}
+.col10{width:83.33%}
+.col11{width:91.66%}
+.col12{width:100%}
+
+a{
+    text-decoration:none;
+    cursor:pointer;
+}
+h2{
+    font-size:3rem;
+    text-transform:uppercase;
+    letter-spacing:0.2rem;
+    display:inline-block;
+    position:relative;
+}
+.container{
+    max-width:80vw;
+    height:100%;
+    margin:0 auto;
+    padding:0 2rem;
+    position:relative;
+}
+
+.btn{
+    display:inline-block;
+    padding:0.8rem 2.4rem;
+    color:#fff;
+    border:1px solid #fff;
+    text-transform:uppercase;
+    font-size:1.2rem;
+    border-radius:1rem;
+}
+
+.btn-primary:hover{
+    color:var(--s-color);
+    background:var(--p-color);
+    transition:background 0.3s ease-in;
+}
+
+.btn-secondary{
+    color:var(--s-color);
+    border-color:var(--s-color);
+    padding:1rem 3rem;
+}
+
+.btn-secondary:hover{
+    color:var(--p-color);
+    background:var(--s-color);
+    transition:background 0.2s ease-in;
+}
+
+.primary{color:var(--p-color);}
+.secondary{color:var(--s-color);}
+.arrow{
+    color:var(--p-color);
+    font-size:3rem;
+}
+/* Main */
+
+body{
+    font-family: primary,sans-serif;
+    box-sizing:border-box;
+    overflow-x:hidden;
+  }
+
+.header{
+    height:85vh;
+    width:100vw;
+    background:linear-gradient(to right ,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../images/peak&cloudy1.jpg");
+    background-size: cover;
+    background-position:top;
+    clip-path:polygon(0 0,100% 0,100% 80%,50% 100%,0 80%);
+    color:var(--p-color);
+    position:relative;
+    z-index:100;
+    margin-bottom:-20vh;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    font-family: Adventure,primary,sans-serif;
+}
+ .navbar .menu,.navbar .logo{
+    display:inline-block;
+    font-size:3rem;
+     cursor:pointer;
+}
+.navbar .logo{
+    color:var(--s-color);
+}
+.header .hero{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-family: primary,sans-serif;
+    text-align:center;
+}
+.hero .slider{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.slider a{
+    color:var(--p-color);
+    display:flex;
+    position:relative;
+    margin-bottom:1rem;
+    width:2rem;
+    height:2rem;
+    justify-content:center;
+    align-items:center;
+    font-size:0.8rem;
+}
+.hero .slider a:nth-child(odd){font-size:1.2rem; }
+.slider-click::before{
+    content:"";
+    width:3rem;
+    height:3rem;
+    position:absolute;
+    border:1px solid #fff;
+    border-radius:50%;
+}
+
+.hero-text{
+    display:inline-block;
+    font-size:3rem;
+}
+.hero-text .hero-primary{
+    font-size:6rem;
+    letter-spacing:0.5rem;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+}
+.hero-text .hero-secondary{
+    font-size:3rem;
+}
+.hero-text .btn-primary{
+    margin-top:3rem;
+    width:20%;
+}
+#about{
+    background:linear-gradient(to bottom ,rgba(255,255,255,0.7),rgba(255,255,255,0.3)),url(../images/bottom-mountain.jpg) no-repeat;
+    width:100vw;
+    height:120vh;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    text-align:center;
+    z-index:10;
+    margin-bottom:-50vh;
+}
+#about .container{
+    padding-top:20vh;
+    
+}
+.secondary{
+    color:var(--s-color);
+}
+#about h2::before{
+    content:"Hike";
+    position:absolute;
+    font-family:Adventure;
+    font-size:10rem;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    z-index:-1;
+    color:var(--s-color);
+    opacity:0.2;
+}
+.about-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.about-content .about-para{
+    column-count:2;
+    text-align:left;
+    font-size:1.5rem;
+    column-gap:10%;
+    margin-bottom:3rem;
+}
+
+#facts{
+    background:linear-gradient(to right ,rgba(2, 195, 154,0.3),rgba(2, 195, 154,0.3)),url(../images/green&land1.jpg) center/cover no-repeat ;
+    clip-path:polygon(0 70%,0 50%,100% 0,100% 100%);
+    background-attachment:fixed;
+    width:100vw;
+    height:100vh;
+    position:relative;
+    z-index:40;
+    margin-bottom:-30vh;
+}
+#facts .content{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    text-align:center;
+}
+#facts .fact-list{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color:var(--p-color);
+    margin-top:3rem;
+}
+.fact-list a{
+    color:var(--p-color);
+    font-size:3rem;
+}
+.fact-list .fact-item{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    height:8rem;
+    width:8rem;
+    border:1px solid var(--p-color);
+    border-radius:50%;
+}
+.fact-item.travelers{position:relative;}
+.fact-item.travelers i{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    bottom:0;
+    left:50%;
+}
+#guides{
+    background:linear-gradient(to right ,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../images/b&w1.jpg) center/cover no-repeat ;
+    clip-path:polygon(0 0,100% 30%,100% 50%,0 100%);
+/*    background-attachment:fixed;*/
+    width:100vw;
+    height:100vh;
+    position:relative;
+    z-index:30;
+    margin-bottom:-50vh;
+    text-align:center;
+}
+#guides .content{
+    position:relative;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+/*    justify-content:center;*/
+}
+#guides .guides-list{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:3rem;
+}
+
+.guide-info1,.guide-info2,.guide-info3{
+    width:10rem;
+    color:var(--p-color);
+}
+.guides-list .guide-img{ 
+    width:10rem;
+    height:10rem;
+    clip-path:circle(50%);
+}
+.guides-list .img1{
+    background:linear-gradient(to right ,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/testimonial/troll3.jpg) center/cover;
+}
+.guides-list .img2{
+    background:url(../images/testimonial/troll1.jpg) center/cover;
+}
+.guides-list .img3{
+    background:linear-gradient(to right ,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/testimonial/troll2.jpg) center/cover;
+}
+.guides-list p{
+    font-size:1.5rem;
+    text-transform:uppercase;
+    display:block;
+}
+#guides .slider{
+    display:flex;
+    position:relative;
+    justify-content:center;
+}
+#guides .slider a{
+    margin-left:1rem;
+}
+
+#news{
+    background:linear-gradient(to right ,rgba(255,255,255,0.3),rgba(255, 255, 255,0.3)),url(../images/green&land2.jpg) center/cover no-repeat ;
+    clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);
+    width:100vw;
+    height:100vh;
+    position:relative;
+    margin-bottom:-15vh;
+    z-index:10;
+}
+#news .content{
+    position:absolute;
+    top:60%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+.photo-slide{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin:5rem 0;
+}
+.photo-slide .photo-slide-item{
+    position:relative;
+}
+.photo-slide .img1,.photo-slide .img2{
+    height:150px;
+    width:300px;   
+    position:absolute;
+    top:-3rem;
+    left:-2rem;
+    z-index:5;
+}
+.photo-slide .img1{
+    background:url(../images/new_route.jpg) center/cover no-repeat;     
+}
+.photo-slide .img2{
+    background:url(../images/india.jpg) center/cover no-repeat; 
+}
+.photo-slide .img-caption{
+    height:150px;
+    width:300px; 
+    border:1px solid var(--p-color);
+}
+.img-caption h3{
+    position:absolute;
+    bottom:0;
+    color:var(--p-color);
+    font-size:1.5rem;
+    padding:0.5rem 1rem;
+}
+.img-caption .photo-time{
+    display:flex;
+    position:absolute;
+    justify-content:space-between;
+    right:-75px;
+    top:0;
+    font-size:1.5rem;
+    height:20px;
+    width:150px;
+    transform-origin:top;
+    transform:rotate(90deg) translate(50%);
+    color:var(--s-color);
+    padding:0.2rem 0.5rem;
+}
+
+.main-footer{
+    background-color:var(--m-color);
+    height:30vh;
+    width:100vw;
+}
+.main-footer .footbar{
+    position:relative;
+    top:60%;
+/*    background:#fff;*/
+    display:flex;
+    justify-content:space-between;
+    font-family: Adventure,primary,sans-serif;
+    align-items:center;
+}
+ .footbar .logo{
+    display:inline-block;
+    font-size:3rem;
+     cursor:pointer;
+}
+.footbar .logo{
+    color:var(--s-color);
+}
+.footbar .menu{
+/*    background:#fff;*/
+    display:flex;
+    font-family:primary,sans-serif;
+}
+.menu li{
+    padding:1rem;
+    list-style:none;
+    color:var(--p-color);
+    font-size:1.5rem;
+    margin-right:1.5rem;
+}
+.menu a{color:var(--p-color);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
